@@ -26,5 +26,11 @@ namespace fproj.Controllers
 
             return View();
         }
+
+        public ActionResult Test()
+        {
+            ViewBag.Message = "This is a test";
+            return View();
+        }
     }
 }
