@@ -29,7 +29,7 @@ namespace fproj.Controllers
 
         public ActionResult FAQ()
         {
-            ViewBag.Message = "This is a test";
+            ViewBag.Message = "Frequently asked questions about TRIO.";
             return View();
         }
 

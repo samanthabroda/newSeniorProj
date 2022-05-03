@@ -4,4 +4,80 @@
 <h2>@ViewBag.Title.</h2>
 <h3>@ViewBag.Message</h3>
 
-<p>Use this area to provide additional information.</p>
+<script type="text/javascript">
+function saveEdits() {
+
+//get the editable element
+var editElem1 = document.getElementById("edit1");
+var editElem2 = document.getElementById("edit2");
+var editElem3 = document.getElementById("edit3");
+var editElem4 = document.getElementById("edit4");
+
+//get the edited element content
+var userVersion1 = editElem1.innerHTML;
+var userVersion2 = editElem2.innerHTML;
+var userVersion3 = editElem3.innerHTML;
+var userVersion4 = editElem4.innerHTML;
+
+//save the content to local storage
+localStorage.userEdits1 = userVersion1;
+localStorage.userEdits2 = userVersion2;
+localStorage.userEdits3 = userVersion3;
+localStorage.userEdits4 = userVersion4;
+
+//write a confirmation to the user
+document.getElementById("update").innerHTML="Edits saved!";
+
+}
+function checkEdits() {
+
+//find out if the user has previously saved edits
+if(localStorage.userEdits1!=null)
+    document.getElementById("edit1").innerHTML=localStorage.userEdits1;
+
+if(localStorage.userEdits2!=null)
+    document.getElementById("edit2").innerHTML=localStorage.userEdits2;
+
+if(localStorage.userEdits3!=null)
+    document.getElementById("edit3").innerHTML=localStorage.userEdits3;
+
+
+if(localStorage.userEdits4!=null)
+    document.getElementById("edit4").innerHTML=localStorage.userEdits4;
+}
+
+</script>
+</head>
+<body onload="checkEdits()">
+
+    <div class="overlay">
+
+        <div id="nameask">
+            Name:
+        </div>
+        <div id="edit1" contenteditable="true">
+            Simrah Malik
+        </div><br>
+        <div id="idask">
+            Education:
+        </div>
+        <div id="edit2" contenteditable="true">
+            Farmingdale State College
+        </div><br>
+        <div id="nameask">
+            Available Days:
+        </div>
+        <div id="edit3" contenteditable="true">
+            Monday, Wednesday, Thursday
+        </div><br>
+        <div id="nameask">
+            Pronouns:
+        </div>
+        <div id="edit4" contenteditable="true">
+            Female
+        </div><br>
+        <input type="button" value="save my edits" onclick="saveEdits()" />
+
+        <div id="update"> Edit the text and click to save for next time</div>
+
+</body>
