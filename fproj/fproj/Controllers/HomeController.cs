@@ -27,10 +27,52 @@ namespace fproj.Controllers
             return View();
         }
 
-        public ActionResult Test()
+        public ActionResult FAQ()
         {
             ViewBag.Message = "This is a test";
             return View();
         }
+
+        public ActionResult Events()
+        {
+            ViewBag.Message = "This is a test";
+            return View();
+        }
+
+        public ActionResult Appointments()
+        {
+            ViewBag.Message = "This is a test";
+            return View();
+        }
+        public ActionResult MProfile()
+        {
+            ViewBag.Message = "This is a test";
+            return View();
+        }
+
+        public ActionResult Calendar()
+        {
+            ViewBag.Message = "This is a test";
+            return View();
+        }
+
+        public ActionResult Dashboard()
+        {
+            ViewBag.Message = "This is a test";
+            return View();
+        }
+
+        public ActionResult Messages()
+        {
+            ViewBag.Message = "This is a test";
+            return View();
+        }
+
+        public ActionResult MFiles()
+        {
+            ViewBag.Message = "This is a test";
+            return View();
+        }
+
     }
 }
