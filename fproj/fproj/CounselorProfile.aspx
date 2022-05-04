@@ -20,7 +20,7 @@
         <p>
             Name:
             <asp:Label ID="lblFirstName" runat="server"></asp:Label>
-        &nbsp;<asp:Label ID="lblLastName" runat="server"></asp:Label>
+            <asp:Label ID="lblLastName" runat="server"></asp:Label>
         </p>
         <p>
             &nbsp;</p>
