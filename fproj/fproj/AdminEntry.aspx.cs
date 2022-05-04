@@ -22,7 +22,7 @@ namespace fproj
         protected void txtSubmit_Click(object sender, EventArgs e)
         {
             c.Open();
-            SqlCommand cmd = new SqlCommand("insert into ADMINISTRATOR values('" + txtFirstName.Text + "','" + txtLastName.Text + "','" + txtBranch.Text + "','" + txtEmail.Text + "','" + txtPhoneNumber.Text + "','" + txtHomeAddress.Text + "','" + txtStatus.Text + "')", c);
+            SqlCommand cmd = new SqlCommand("insert into ADMINISTRATOR (FirstName, LastName, Branch, Email, PhoneNumber, HomeAddress, Status) values('" + txtFirstName.Text + "','" + txtLastName.Text + "','" + txtBranch.Text + "','" + txtEmail.Text + "','" + txtPhoneNumber.Text + "','" + txtHomeAddress.Text + "','" + txtStatus.Text + "')", c);
             cmd.ExecuteNonQuery();
             lblMessage.Text = "Record submitted successfully!";
             c.Close();

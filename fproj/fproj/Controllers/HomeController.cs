@@ -74,5 +74,10 @@ namespace fproj.Controllers
             return View();
         }
 
+        public ActionResult StudentEntry()
+        {
+            return View();
+        }
+
     }
 }

@@ -184,6 +184,13 @@
     <Compile Include="CounselorEntry.aspx.designer.cs">
       <DependentUpon>CounselorEntry.aspx</DependentUpon>
     </Compile>
+    <Compile Include="CounselorProfile.aspx.cs">
+      <DependentUpon>CounselorProfile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CounselorProfile.aspx.designer.cs">
+      <DependentUpon>CounselorProfile.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -215,6 +222,7 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\CalendarStyle.css" />
     <Content Include="CounselorEntry.aspx" />
+    <Content Include="CounselorProfile.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />

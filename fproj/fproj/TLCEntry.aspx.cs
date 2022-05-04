@@ -22,7 +22,7 @@ namespace fproj
         protected void txtSubmit_Click(object sender, EventArgs e)
         {
             c.Open();
-            SqlCommand cmd = new SqlCommand("insert into TLC values('" + txtRamID.Text + "','" + txtFirstName.Text + "','" + txtLastName.Text + "','" + txtPosition.Text + "','" + txtMajor.Text + "','" + txtStanding.Text + "','" + txtCurrentGPA.Text + "','" + txtEmail.Text + "','" + txtPhoneNumber.Text + "','" + txtHomeAddress.Text + "','" + txtStatus.Text + "')", c);
+            SqlCommand cmd = new SqlCommand("insert into TLC (RAMID, FirstName, LastName, Position, Major, Standing, CurrentGPA, Email, PhoneNumber, HomeAddress, Status) values('" + txtRamID.Text + "','" + txtFirstName.Text + "','" + txtLastName.Text + "','" + txtPosition.Text + "','" + txtMajor.Text + "','" + txtStanding.Text + "','" + txtCurrentGPA.Text + "','" + txtEmail.Text + "','" + txtPhoneNumber.Text + "','" + txtHomeAddress.Text + "','" + txtStatus.Text + "')", c);
             cmd.ExecuteNonQuery();
             lblMessage.Text = "Record submitted successfully!";
             c.Close();
