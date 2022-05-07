@@ -12,7 +12,7 @@ namespace fproj
   
     public partial class CounselorEntry : System.Web.UI.Page
     {
-        SqlConnection c = new SqlConnection(@"Data Source=DESKTOP-DOT3O9P\SQLEXPRESS; Initial Catalog=master; User Id=maliksimrah; Password=@Farmingdale123");
+        SqlConnection c = new SqlConnection(@"Data Source=DESKTOP-DOT3O9P,1434; Initial Catalog=master; User Id=maliksimrah; Password=@Farmingdale123");
 
         protected void Page_Load(object sender, EventArgs e)
         {

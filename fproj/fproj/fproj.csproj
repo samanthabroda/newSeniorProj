@@ -174,9 +174,23 @@
     <Compile Include="App_Start\IdentityConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
+    <Compile Include="BookSamanthaBrodaAppointment.aspx.cs">
+      <DependentUpon>BookSamanthaBrodaAppointment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BookSamanthaBrodaAppointment.aspx.designer.cs">
+      <DependentUpon>BookSamanthaBrodaAppointment.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="CounselorEditProfile.aspx.cs">
+      <DependentUpon>CounselorEditProfile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CounselorEditProfile.aspx.designer.cs">
+      <DependentUpon>CounselorEditProfile.aspx</DependentUpon>
+    </Compile>
     <Compile Include="CounselorEntry.aspx.cs">
       <DependentUpon>CounselorEntry.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -216,11 +230,13 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="AdminEntry.aspx" />
+    <Content Include="BookSamanthaBrodaAppointment.aspx" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\CalendarStyle.css" />
+    <Content Include="CounselorEditProfile.aspx" />
     <Content Include="CounselorEntry.aspx" />
     <Content Include="CounselorProfile.aspx" />
     <Content Include="favicon.ico" />

@@ -4,43 +4,28 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Data;
 using System.Data.SqlClient;
 
 namespace fproj
 {
-    public partial class CounselorProfile : System.Web.UI.Page
+    public partial class CounselorEditProfile : System.Web.UI.Page
     {
         SqlConnection c = new SqlConnection(@"Data Source=DESKTOP-DOT3O9P,1434; Initial Catalog=master; User Id=maliksimrah; Password=@Farmingdale123");
 
+
         protected void Page_Load(object sender, EventArgs e)
-        {      
+        {
             c.Open();
-            SqlCommand fname = new SqlCommand("SELECT FirstName FROM COUNSELOR WHERE CounselorID=1", c);
-            SqlCommand lname = new SqlCommand("SELECT LastName FROM COUNSELOR WHERE CounselorID=1", c);
+            
             SqlCommand pro = new SqlCommand("SELECT Pronouns FROM COUNSELOR WHERE CounselorID=1", c);
             SqlCommand abme = new SqlCommand("SELECT AboutMe FROM COUNSELOR WHERE CounselorID=1", c);
             SqlCommand exp = new SqlCommand("SELECT Experience FROM COUNSELOR WHERE CounselorID=1", c);
-            SqlCommand ava = new SqlCommand("SELECT Availability FROM COUNSELOR WHERE CounselorID=1", c);
-
-
-            SqlDataReader fnamereader = fname.ExecuteReader();
-            if (fnamereader.Read())
-            {
-                lblFirstName.Text = fnamereader.GetString(0);
-                fnamereader.Close();
-            }
-
-            SqlDataReader lnamereader = lname.ExecuteReader();
-            if (lnamereader.Read())
-            {
-                lblLastName.Text = lnamereader.GetString(0);
-                lnamereader.Close();
-            }
 
             SqlDataReader abmereader = abme.ExecuteReader();
             if (abmereader.Read())
-            {               
-                
+            {
+
                 lblAboutMe.Text = abmereader.GetString(0);
                 abmereader.Close();
             }
@@ -58,14 +43,33 @@ namespace fproj
                 lblExperience.Text = expreader.GetString(0);
                 expreader.Close();
             }
-
-            SqlDataReader avareader = ava.ExecuteReader();  
-            if (avareader.Read())
-            {
-                lblAvailability.Text = avareader.GetString(0);
-                avareader.Close();
-            }
             c.Close();
         }
+
+        protected void btnSaveButton_Click(object sender, EventArgs e)
+        {
+            c.Open();
+            SqlCommand cmd = new SqlCommand("exec spUpdateCounselorProfile @CounselorID=@id, @Pronouns=@pro , @Aboutme=@abme, @Experience=@exp;", c);
+            cmd.Parameters.AddWithValue("@id", 1);
+            if (txtPronouns.Text.Length < 1)
+            {
+                txtPronouns.Text = lblPronouns.Text;
+            }
+            if (txtAboutMe.Text.Length < 1)
+            {
+                txtAboutMe.Text = lblAboutMe.Text;
+            }
+            if (txtExperience.Text.Length < 1)
+            {
+                txtExperience.Text = lblExperience.Text;
+            }
+            cmd.Parameters.AddWithValue("@pro", txtPronouns.Text);
+            cmd.Parameters.AddWithValue("@abme", txtAboutMe.Text);
+            cmd.Parameters.AddWithValue("@exp", txtExperience.Text);
+            cmd.ExecuteNonQuery();
+            lblMessage.Text = "Changes saved successfully!";
+            c.Close();
+        }
+     
     }
 }
