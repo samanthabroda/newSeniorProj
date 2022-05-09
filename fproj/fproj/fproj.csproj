@@ -181,6 +181,13 @@
     <Compile Include="BookSamanthaBrodaAppointment.aspx.designer.cs">
       <DependentUpon>BookSamanthaBrodaAppointment.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Calendar.aspx.cs">
+      <DependentUpon>Calendar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Calendar.aspx.designer.cs">
+      <DependentUpon>Calendar.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
@@ -220,6 +227,13 @@
     <Compile Include="StudentEntry.aspx.designer.cs">
       <DependentUpon>StudentEntry.aspx</DependentUpon>
     </Compile>
+    <Compile Include="StudentProfileaspx.aspx.cs">
+      <DependentUpon>StudentProfileaspx.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StudentProfileaspx.aspx.designer.cs">
+      <DependentUpon>StudentProfileaspx.aspx</DependentUpon>
+    </Compile>
     <Compile Include="TLCEntry.aspx.cs">
       <DependentUpon>TLCEntry.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -231,6 +245,7 @@
   <ItemGroup>
     <Content Include="AdminEntry.aspx" />
     <Content Include="BookSamanthaBrodaAppointment.aspx" />
+    <Content Include="Calendar.aspx" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
@@ -258,6 +273,7 @@
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
     <Content Include="StudentEntry.aspx" />
+    <Content Include="StudentProfileaspx.aspx" />
     <Content Include="TLCEntry.aspx" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">

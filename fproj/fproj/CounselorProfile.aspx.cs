@@ -27,44 +27,54 @@ namespace fproj
             if (fnamereader.Read())
             {
                 lblFirstName.Text = fnamereader.GetString(0);
-                fnamereader.Close();
             }
+
+            fnamereader.Close();
 
             SqlDataReader lnamereader = lname.ExecuteReader();
             if (lnamereader.Read())
             {
                 lblLastName.Text = lnamereader.GetString(0);
-                lnamereader.Close();
             }
+
+            lnamereader.Close();
 
             SqlDataReader abmereader = abme.ExecuteReader();
             if (abmereader.Read())
             {               
                 
                 lblAboutMe.Text = abmereader.GetString(0);
-                abmereader.Close();
+                
             }
+
+            abmereader.Close();
 
             SqlDataReader proreader = pro.ExecuteReader();
             if (proreader.Read())
             {
                 lblPronouns.Text = proreader.GetString(0);
-                proreader.Close();
+                
             }
+
+            proreader.Close();
 
             SqlDataReader expreader = exp.ExecuteReader();
             if (expreader.Read())
             {
                 lblExperience.Text = expreader.GetString(0);
-                expreader.Close();
+                
             }
+
+            expreader.Close();
 
             SqlDataReader avareader = ava.ExecuteReader();  
             if (avareader.Read())
             {
                 lblAvailability.Text = avareader.GetString(0);
-                avareader.Close();
+                
             }
+
+            avareader.Close();
             c.Close();
         }
     }
