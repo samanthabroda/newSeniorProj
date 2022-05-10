@@ -72,7 +72,7 @@ namespace fproj.Controllers
             b.Open();
             SqlCommand cmd = new SqlCommand("INSERT INTO FAQ (Question, Answer) VALUES ('insert question here', 'insert answer here')", b);
             b.Close();
-            return FAQEdit();
+            return View(FAQEdit());
         }
 
         void FAQDelete(int value)

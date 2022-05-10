@@ -1,0 +1,21 @@
+﻿@{
+    ViewBag.Title = "TRIO FAQ Edit";
+}
+    <h2>@ViewBag.Title (@Html.ActionLink("Done", "FAQ", "Home"))</h2>
+    <a class="btn btn-primary" href="@Url.Action("FAQAdd","HomeController")">Create New</a>
+
+<!-- Bootstrap FAQ - START -->
+<div class="container">
+    <br />
+        @foreach (var item in Model)
+        {
+            <p>
+                Question:
+            </p>
+            <p>
+                Answer:
+            </p>
+            <a class="btn btn-primary" href="@Html.ActionLink("FAQDelete","HomeController", new { value=item.QuestionID})">Delete</a> <a class="btn btn-primary" href="@Html.ActionLink("FAQSaveEdit","HomeController", new { value=item.QuestionID})">Save</a>
+            <br/>
+        }
+</div>

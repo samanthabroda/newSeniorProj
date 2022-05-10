@@ -341,6 +341,7 @@
     <Content Include="Views\Home\MFiles.cshtml" />
     <Content Include="Views\Home\UserTable.cshtml" />
     <Content Include="Views\Home\FAQEdit.cshtml" />
+    <Content Include="Views\Home\FAQAdd.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
