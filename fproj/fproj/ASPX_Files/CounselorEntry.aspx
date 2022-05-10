@@ -1,8 +1,9 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="CounselorEntry.aspx.cs" Inherits="fproj.CounselorEntry" %>
 
+<link href="~/Content/Entry.css" rel="Stylesheet" type="text/css" />
 <!DOCTYPE html>
 <html lang="en">
-    <link href="~/Content/Entry.css" rel="Stylesheet" type="text/css" />
+    
 <body>
  `<h1>Add Counselors</h1>
     <div id="container">
