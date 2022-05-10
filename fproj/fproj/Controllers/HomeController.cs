@@ -74,10 +74,50 @@ namespace fproj.Controllers
             return View();
         }
 
-        public ActionResult StudentEntry()
+        public ActionResult AdminEntry()
         {
             return View();
         }
 
+        public ActionResult CounselorEditProfile()
+        {
+            return View();
+        }
+
+        public ActionResult CounselorProfile()
+        {
+            return View();
+        }
+
+        public ActionResult StudentProfile()
+        {
+            return View();
+        }
+
+
+        public ActionResult StudentEditProfile()
+        {
+            return View();
+        }
+
+        public ActionResult TLCProfile()
+        {
+            return View();
+        }
+
+        public ActionResult TLCEditProfile()
+        {
+            return View();
+        }
+
+        public ActionResult AdminProfile()
+        {
+            return View();
+        }
+
+        public ActionResult AdminEditProfile()
+        {
+            return View();
+        }
     }
 }
