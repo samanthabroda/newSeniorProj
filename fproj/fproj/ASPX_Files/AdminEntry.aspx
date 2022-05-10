@@ -9,7 +9,7 @@
 
 
 <body>
-    <h1>Add Administrators</h1>
+    <h1>Add Administrator</h1>
     <div id="container">
 		
         
