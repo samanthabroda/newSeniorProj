@@ -76,7 +76,7 @@ namespace fproj.Controllers
 
         public ActionResult AdminEntry()
         {
-            return View();
+            return Redirect("~/ASPX_Files/AdminEntry.aspx");
         }
 
         public ActionResult CounselorEditProfile()
@@ -112,12 +112,12 @@ namespace fproj.Controllers
 
         public ActionResult AdminProfile()
         {
-            return View();
+            return Redirect("~/ASPX_Files/AdminProfile.aspx"); ;
         }
 
         public ActionResult AdminEditProfile()
         {
-            return View();
+            return Redirect("~/ASPX_Files/AdminEditProfile.aspx");
         }
     }
 }
