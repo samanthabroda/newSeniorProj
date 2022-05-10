@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
@@ -29,8 +30,68 @@ namespace fproj.Controllers
 
         public ActionResult FAQ()
         {
-            ViewBag.Message = "Frequently asked questions about TRIO.";
-            return View();
+            SqlConnection b = new SqlConnection(@"Data Source=DESKTOP-DOT3O9P,1434; Initial Catalog=master; User Id=maliksimrah; Password=@Farmingdale123");
+            SqlCommand cmd = new SqlCommand("SELECT * FROM FAQ", b);
+            var model = new List<Models.FAQEntry>();
+            b.Open();
+            SqlDataReader rdr = cmd.ExecuteReader();
+            while(rdr.Read())
+            {
+                var faqent = new Models.FAQEntry();
+                faqent.QuestionID1 = (int)rdr["QuestionID"];
+                faqent.QuestionValue = (string)rdr["Question"];
+                faqent.AnswerValue = (string)rdr["Answer"];
+                model.Add(faqent);
+            }
+            b.Close();
+            return View(model);
+        }
+
+        public ActionResult FAQEdit()
+        {
+            SqlConnection b = new SqlConnection(@"Data Source=DESKTOP-DOT3O9P,1434; Initial Catalog=master; User Id=maliksimrah; Password=@Farmingdale123");
+            SqlCommand cmd = new SqlCommand("SELECT * FROM FAQ", b);
+            var model = new List<Models.FAQEntry>();
+            b.Open();
+            SqlDataReader rdr = cmd.ExecuteReader();
+            while (rdr.Read())
+            {
+                var faqent = new Models.FAQEntry();
+                faqent.QuestionID1 = (int)rdr["QuestionID"];
+                faqent.QuestionValue = (string)rdr["Question"];
+                faqent.AnswerValue = (string)rdr["Answer"];
+                model.Add(faqent);
+            }
+            b.Close();
+            return View(model);
+        }
+
+        void FAQAdd()
+        {
+            SqlConnection b = new SqlConnection(@"Data Source=DESKTOP-DOT3O9P,1434; Initial Catalog=master; User Id=maliksimrah; Password=@Farmingdale123");
+            b.Open();
+            SqlCommand cmd = new SqlCommand("INSERT INTO FAQ (Question, Answer) VALUES ('insert question here', 'insert answer here')", b);
+            b.Close();
+            FAQEdit();
+        }
+
+        void FAQDelete(int value)
+        {
+            SqlConnection c = new SqlConnection(@"Data Source=DESKTOP-DOT3O9P,1434; Initial Catalog=master; User Id=maliksimrah; Password=@Farmingdale123");
+            c.Open();
+            SqlCommand quest = new SqlCommand($"DELETE FROM FAQ WHERE QuestionID={value}", c);
+            quest.ExecuteNonQuery();
+            c.Close();
+            FAQEdit();
+        }
+
+        void FAQSaveEdit(int value)
+        {
+            SqlConnection c = new SqlConnection(@"Data Source=DESKTOP-DOT3O9P,1434; Initial Catalog=master; User Id=maliksimrah; Password=@Farmingdale123");
+            c.Open();
+            SqlCommand quest = new SqlCommand($"SELECT Question FROM FAQ WHERE QuestionID={value}", c);
+            SqlCommand ans = new SqlCommand($"SELECT Answer FROM FAQ WHERE QuestionID={value}", c);
+            c.Close();
         }
 
         public ActionResult Events()
