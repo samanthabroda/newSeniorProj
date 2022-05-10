@@ -1,7 +1,11 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="AdminEntry.aspx.cs" Inherits="fproj.AdminEntry" %>
 
 <!DOCTYPE html>
+
+<link href="../CSS/EntryForm.css" rel="Stylesheet" type="text/css" />
 <html lang="en">
+
+
 
 
 <body>

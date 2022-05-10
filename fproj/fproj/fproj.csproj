@@ -278,6 +278,7 @@
     <Content Include="ASPX_Files\CounselorEditProfile.aspx" />
     <Content Include="ASPX_Files\CounselorEntry.aspx" />
     <Content Include="ASPX_Files\CounselorProfile.aspx" />
+    <Content Include="CSS\EntryForm.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
