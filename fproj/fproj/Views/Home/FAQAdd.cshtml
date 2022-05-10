@@ -11,9 +11,11 @@
         {
             <p>
                 Question:
+                @item.QuestionValue
             </p>
             <p>
                 Answer:
+                @item.AnswerValue
             </p>
             <a class="btn btn-primary" href="@Html.ActionLink("FAQDelete","HomeController", new { value=item.QuestionID})">Delete</a> <a class="btn btn-primary" href="@Html.ActionLink("FAQSaveEdit","HomeController", new { value=item.QuestionID})">Save</a>
             <br/>

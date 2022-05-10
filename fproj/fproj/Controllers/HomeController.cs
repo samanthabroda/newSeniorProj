@@ -70,7 +70,7 @@ namespace fproj.Controllers
         {
             SqlConnection b = new SqlConnection(@"Data Source=DESKTOP-DOT3O9P,1434; Initial Catalog=master; User Id=maliksimrah; Password=@Farmingdale123");
             b.Open();
-            SqlCommand cmd = new SqlCommand("INSERT INTO FAQ (Question, Answer) VALUES ('insert question here', 'insert answer here')", b);
+            SqlCommand cmd = new SqlCommand("INSERT INTO FAQ VALUES ('insert question here', 'insert answer here')", b);
             SqlCommand cmd2 = new SqlCommand("SELECT * FROM FAQ", b);
             var model = new List<Models.FAQEntry>();
             SqlDataReader rdr = cmd2.ExecuteReader();
