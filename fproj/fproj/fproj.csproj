@@ -162,11 +162,18 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AdminEntry.aspx.cs">
+    <Compile Include="ASPX_Files\AdminEditProfile.aspx.cs">
+      <DependentUpon>AdminEditProfile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ASPX_Files\AdminEditProfile.aspx.designer.cs">
+      <DependentUpon>AdminEditProfile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ASPX_Files\AdminEntry.aspx.cs">
       <DependentUpon>AdminEntry.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="AdminEntry.aspx.designer.cs">
+    <Compile Include="ASPX_Files\AdminEntry.aspx.designer.cs">
       <DependentUpon>AdminEntry.aspx</DependentUpon>
     </Compile>
     <Compile Include="App_Start\BundleConfig.cs" />
@@ -174,28 +181,42 @@
     <Compile Include="App_Start\IdentityConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
-    <Compile Include="BookSamanthaBrodaAppointment.aspx.cs">
-      <DependentUpon>BookSamanthaBrodaAppointment.aspx</DependentUpon>
+    <Compile Include="ASPX_Files\AdminProfile.aspx.cs">
+      <DependentUpon>AdminProfile.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="BookSamanthaBrodaAppointment.aspx.designer.cs">
-      <DependentUpon>BookSamanthaBrodaAppointment.aspx</DependentUpon>
+    <Compile Include="ASPX_Files\AdminProfile.aspx.designer.cs">
+      <DependentUpon>AdminProfile.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Calendar.aspx.cs">
-      <DependentUpon>Calendar.aspx</DependentUpon>
+    <Compile Include="ASPX_Files\StudentEditProfile.aspx.cs">
+      <DependentUpon>StudentEditProfile.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Calendar.aspx.designer.cs">
-      <DependentUpon>Calendar.aspx</DependentUpon>
+    <Compile Include="ASPX_Files\StudentEditProfile.aspx.designer.cs">
+      <DependentUpon>StudentEditProfile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ASPX_Files\TLCEditProfile.aspx.cs">
+      <DependentUpon>TLCEditProfile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ASPX_Files\TLCEditProfile.aspx.designer.cs">
+      <DependentUpon>TLCEditProfile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ASPX_Files\TLCProfile.aspx.cs">
+      <DependentUpon>TLCProfile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ASPX_Files\TLCProfile.aspx.designer.cs">
+      <DependentUpon>TLCProfile.aspx</DependentUpon>
     </Compile>
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
-    <Compile Include="CounselorEditProfile.aspx.cs">
+    <Compile Include="ASPX_Files\CounselorEditProfile.aspx.cs">
       <DependentUpon>CounselorEditProfile.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="CounselorEditProfile.aspx.designer.cs">
+    <Compile Include="ASPX_Files\CounselorEditProfile.aspx.designer.cs">
       <DependentUpon>CounselorEditProfile.aspx</DependentUpon>
     </Compile>
     <Compile Include="CounselorEntry.aspx.cs">
@@ -205,11 +226,11 @@
     <Compile Include="CounselorEntry.aspx.designer.cs">
       <DependentUpon>CounselorEntry.aspx</DependentUpon>
     </Compile>
-    <Compile Include="CounselorProfile.aspx.cs">
+    <Compile Include="ASPX_Files\CounselorProfile.aspx.cs">
       <DependentUpon>CounselorProfile.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="CounselorProfile.aspx.designer.cs">
+    <Compile Include="ASPX_Files\CounselorProfile.aspx.designer.cs">
       <DependentUpon>CounselorProfile.aspx</DependentUpon>
     </Compile>
     <Compile Include="Global.asax.cs">
@@ -227,11 +248,11 @@
     <Compile Include="StudentEntry.aspx.designer.cs">
       <DependentUpon>StudentEntry.aspx</DependentUpon>
     </Compile>
-    <Compile Include="StudentProfileaspx.aspx.cs">
+    <Compile Include="ASPX_Files\StudentProfileaspx.aspx.cs">
       <DependentUpon>StudentProfileaspx.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="StudentProfileaspx.aspx.designer.cs">
+    <Compile Include="ASPX_Files\StudentProfileaspx.aspx.designer.cs">
       <DependentUpon>StudentProfileaspx.aspx</DependentUpon>
     </Compile>
     <Compile Include="TLCEntry.aspx.cs">
@@ -243,17 +264,20 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="AdminEntry.aspx" />
-    <Content Include="BookSamanthaBrodaAppointment.aspx" />
-    <Content Include="Calendar.aspx" />
+    <Content Include="ASPX_Files\AdminEditProfile.aspx" />
+    <Content Include="ASPX_Files\AdminEntry.aspx" />
+    <Content Include="ASPX_Files\AdminProfile.aspx" />
+    <Content Include="ASPX_Files\StudentEditProfile.aspx" />
+    <Content Include="ASPX_Files\TLCEditProfile.aspx" />
+    <Content Include="ASPX_Files\TLCProfile.aspx" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\CalendarStyle.css" />
-    <Content Include="CounselorEditProfile.aspx" />
+    <Content Include="ASPX_Files\CounselorEditProfile.aspx" />
     <Content Include="CounselorEntry.aspx" />
-    <Content Include="CounselorProfile.aspx" />
+    <Content Include="ASPX_Files\CounselorProfile.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -273,7 +297,7 @@
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
     <Content Include="StudentEntry.aspx" />
-    <Content Include="StudentProfileaspx.aspx" />
+    <Content Include="ASPX_Files\StudentProfileaspx.aspx" />
     <Content Include="TLCEntry.aspx" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
