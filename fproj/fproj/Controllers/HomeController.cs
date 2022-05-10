@@ -71,8 +71,20 @@ namespace fproj.Controllers
             SqlConnection b = new SqlConnection(@"Data Source=DESKTOP-DOT3O9P,1434; Initial Catalog=master; User Id=maliksimrah; Password=@Farmingdale123");
             b.Open();
             SqlCommand cmd = new SqlCommand("INSERT INTO FAQ (Question, Answer) VALUES ('insert question here', 'insert answer here')", b);
+            SqlCommand cmd2 = new SqlCommand("SELECT * FROM FAQ", b);
+            var model = new List<Models.FAQEntry>();
+            SqlDataReader rdr = cmd2.ExecuteReader();
+            while (rdr.Read())
+            {
+                var faqent = new Models.FAQEntry();
+                faqent.QuestionID1 = (int)rdr["QuestionID"];
+                faqent.QuestionValue = (string)rdr["Question"];
+                faqent.AnswerValue = (string)rdr["Answer"];
+                model.Add(faqent);
+            }
             b.Close();
-            return View(FAQEdit());
+
+            return View(model);
         }
 
         void FAQDelete(int value)
