@@ -81,33 +81,33 @@ namespace fproj.Controllers
 
         public ActionResult CounselorEditProfile()
         {
-            return View();
+            return Redirect("~/ASPX_Files/CounselorEditProfile.aspx");
         }
 
         public ActionResult CounselorProfile()
         {
-            return View();
+            return Redirect("~/ASPX_Files/CounselorProfile.aspx");
         }
 
         public ActionResult StudentProfile()
         {
-            return View();
+            return Redirect("~/ASPX_Files/StudentProfile.aspx");
         }
 
 
         public ActionResult StudentEditProfile()
         {
-            return View();
+            return Redirect("~/ASPX_Files/StudentEditProfile.aspx");
         }
 
         public ActionResult TLCProfile()
         {
-            return View();
+            return Redirect("~/ASPX_Files/TLCProfile.aspx");
         }
 
         public ActionResult TLCEditProfile()
         {
-            return View();
+            return Redirect("~/ASPX_Files/TLCEditProfile.aspx");
         }
 
         public ActionResult AdminProfile()

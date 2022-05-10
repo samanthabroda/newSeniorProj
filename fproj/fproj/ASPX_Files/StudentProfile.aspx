@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="StudentProfileaspx.aspx.cs" Inherits="fproj.StudentProfileaspx" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="StudentProfile.aspx.cs" Inherits="fproj.StudentProfileaspx" %>
 
 <!DOCTYPE html>
 
@@ -13,8 +13,6 @@
 </head>
 <body>
     <form id="form1" runat="server">
-        <p>
-            &nbsp;</p>
         <p>
             &nbsp;</p>
         <p>
