@@ -119,5 +119,20 @@ namespace fproj.Controllers
         {
             return Redirect("~/ASPX_Files/AdminEditProfile.aspx");
         }
+
+        public ActionResult StudentEntry()
+        {
+            return Redirect("~/ASPX_Files/StudentEntry.aspx");
+        }
+
+        public ActionResult TLCEntry()
+        {
+            return Redirect("~/ASPX_Files/TLCEntry.aspx");
+        }
+
+        public ActionResult CounselorEntry()
+        {
+            return Redirect("~/ASPX_Files/CounselorEntry.aspx");
+        }
     }
 }
