@@ -66,13 +66,13 @@ namespace fproj.Controllers
             return View(model);
         }
 
-        void FAQAdd()
+        public ActionResult FAQAdd()
         {
             SqlConnection b = new SqlConnection(@"Data Source=DESKTOP-DOT3O9P,1434; Initial Catalog=master; User Id=maliksimrah; Password=@Farmingdale123");
             b.Open();
             SqlCommand cmd = new SqlCommand("INSERT INTO FAQ (Question, Answer) VALUES ('insert question here', 'insert answer here')", b);
             b.Close();
-            FAQEdit();
+            return FAQEdit();
         }
 
         void FAQDelete(int value)
