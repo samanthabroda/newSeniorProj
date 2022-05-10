@@ -27,23 +27,30 @@ namespace fproj
             {
 
                 lblAboutMe.Text = abmereader.GetString(0);
-                abmereader.Close();
+                
             }
+
+            abmereader.Close();
 
             SqlDataReader proreader = pro.ExecuteReader();
             if (proreader.Read())
             {
                 lblPronouns.Text = proreader.GetString(0);
-                proreader.Close();
+                
             }
+
+            proreader.Close();
 
             SqlDataReader expreader = exp.ExecuteReader();
             if (expreader.Read())
             {
                 lblExperience.Text = expreader.GetString(0);
-                expreader.Close();
+                
             }
+
+            expreader.Close();
             c.Close();
+
         }
 
         protected void btnSaveButton_Click(object sender, EventArgs e)
