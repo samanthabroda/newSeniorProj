@@ -219,13 +219,6 @@
     <Compile Include="ASPX_Files\CounselorEditProfile.aspx.designer.cs">
       <DependentUpon>CounselorEditProfile.aspx</DependentUpon>
     </Compile>
-    <Compile Include="ASPX_Files\CounselorEntry.aspx.cs">
-      <DependentUpon>CounselorEntry.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="ASPX_Files\CounselorEntry.aspx.designer.cs">
-      <DependentUpon>CounselorEntry.aspx</DependentUpon>
-    </Compile>
     <Compile Include="ASPX_Files\CounselorProfile.aspx.cs">
       <DependentUpon>CounselorProfile.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -241,26 +234,12 @@
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
-    <Compile Include="ASPX_Files\StudentEntry.aspx.cs">
-      <DependentUpon>StudentEntry.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="ASPX_Files\StudentEntry.aspx.designer.cs">
-      <DependentUpon>StudentEntry.aspx</DependentUpon>
-    </Compile>
     <Compile Include="ASPX_Files\StudentProfile.aspx.cs">
       <DependentUpon>StudentProfile.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="ASPX_Files\StudentProfile.aspx.designer.cs">
       <DependentUpon>StudentProfile.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="ASPX_Files\TLCEntry.aspx.cs">
-      <DependentUpon>TLCEntry.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="ASPX_Files\TLCEntry.aspx.designer.cs">
-      <DependentUpon>TLCEntry.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -276,7 +255,6 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\CalendarStyle.css" />
     <Content Include="ASPX_Files\CounselorEditProfile.aspx" />
-    <Content Include="ASPX_Files\CounselorEntry.aspx" />
     <Content Include="ASPX_Files\CounselorProfile.aspx" />
     <Content Include="CSS\EntryForm.css" />
     <Content Include="favicon.ico" />
@@ -297,9 +275,7 @@
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
-    <Content Include="ASPX_Files\StudentEntry.aspx" />
     <Content Include="ASPX_Files\StudentProfile.aspx" />
-    <Content Include="ASPX_Files\TLCEntry.aspx" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

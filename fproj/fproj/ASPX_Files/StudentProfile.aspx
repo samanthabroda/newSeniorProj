@@ -43,7 +43,7 @@
         <p>
             &nbsp;</p>
         <p>
-            <asp:HyperLink ID="hplEditProfile" runat="server" NavigateUrl="~/StudentEditProfile.aspx" style="text-decoration: underline; font-weight: 700">Edit Profile</asp:HyperLink>
+            <asp:HyperLink ID="hplEditProfile" runat="server" NavigateUrl="~/ASPX_Files/StudentEditProfile.aspx" style="text-decoration: underline; font-weight: 700">Edit Profile</asp:HyperLink>
         </p>
     </form>
     <p>
