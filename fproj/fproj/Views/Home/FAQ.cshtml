@@ -12,10 +12,10 @@
                 <div class="panel panel-default">
                     <div class="panel-heading">
                         <h4 class="panel-title">
-                            <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="'#men-' + @item.QuestionID1">@item.QuestionValue</a>
+                            <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse + @item.QuestionID1">@item.QuestionValue</a>
                         </h4>
                     </div>
-                    <div id="'men-' + @item.QuestionID1" class="panel-collapse collapse">
+                    <div id="collapse + @item.QuestionID1" class="panel-collapse collapse">
                         <div class="panel-body">
                             <p>@item.AnswerValue</p>
                         </div>
