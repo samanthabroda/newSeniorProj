@@ -9,6 +9,8 @@
         <div class="panel-group" id="accordion">
             @foreach (var item in Model)
             {
+                var res = @item.QuestionID1;
+                var res2 = res.ToWords("en-US");
                 <div class="panel panel-default">
                     <div class="panel-heading">
                         <h4 class="panel-title">
