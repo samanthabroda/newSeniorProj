@@ -1,4 +1,36 @@
-﻿
+﻿* {
+    font-family: "Montserrat", sans-serif;
+}
 h1 {
     text-align: center;
+    font-size: large;
+}
+
+.allForms {
+    align-items: center;
+    margin: auto;
+    width: 60%;
+}
+.labels {
+    margin-top: 5px;
+    display: inline-block;
+    float: left;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    text-align: left;
+    width: 40%;
+}
+
+.textBoxes {
+    margin-top: 5px;
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+    display: inline-block;
+    align-items: center;
+    text-align: left;
+    width: 70%;
+}
+
+.txtSubmit {
+    align-items: center;
 }

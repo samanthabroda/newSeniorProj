@@ -1,7 +1,7 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="AdminEditProfile.aspx.cs" Inherits="fproj.ASPX_Files.AdminEditProfile" %>
 
 <!DOCTYPE html>
-
+<link href="../CSS/EntryForm.css" rel="Stylesheet" type="text/css" />
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title></title>

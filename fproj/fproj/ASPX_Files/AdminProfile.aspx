@@ -1,15 +1,15 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="AdminProfile.aspx.cs" Inherits="fproj.ASPX_Files.AdminProfile" %>
 
 <!DOCTYPE html>
-
+<link href="../CSS/EntryForm.css" rel="Stylesheet" type="text/css" />
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title></title>
     <style type="text/css">
         #form1 {
             width: 1264px;
         }
     </style>
+
 </head>
 <body>
     <form id="form1" runat="server">

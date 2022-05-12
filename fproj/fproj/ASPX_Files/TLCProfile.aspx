@@ -8,6 +8,7 @@
     <style type="text/css">
         #form1 {
             width: 1264px;
+            text-align: center;
         }
     </style>
 </head>
