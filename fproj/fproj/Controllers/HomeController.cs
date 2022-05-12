@@ -4,6 +4,10 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using System.Globalization;
+using Humanizer;
+using Humanizer.Localisation;
+using Humanizer.Localisation.NumberToWords;
 
 namespace fproj.Controllers
 {
@@ -39,6 +43,9 @@ namespace fproj.Controllers
             {
                 var faqent = new Models.FAQEntry();
                 faqent.QuestionID1 = (int)rdr["QuestionID"];
+                var value = faqent.QuestionID1.ToWords();
+                var sval = CultureInfo.CurrentCulture.TextInfo.ToTitleCase(value.ToLower());
+                faqent.QuestionIDWord = sval;
                 faqent.QuestionValue = (string)rdr["Question"];
                 faqent.AnswerValue = (string)rdr["Answer"];
                 model.Add(faqent);

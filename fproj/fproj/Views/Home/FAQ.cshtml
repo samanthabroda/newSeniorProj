@@ -9,15 +9,15 @@
         <div class="panel-group" id="accordion">
             @foreach (var item in Model)
             {
-                var res = @item.QuestionID1;
+                var res = @item.QuestionIDWord;
                 var res2 = res.ToWords("en-US");
                 <div class="panel panel-default">
                     <div class="panel-heading">
                         <h4 class="panel-title">
-                            <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse + @item.QuestionID1">@item.QuestionValue</a>
+                            <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href='@string.Format("#collapse{0}", res)'>@item.QuestionValue</a>
                         </h4>
                     </div>
-                    <div id="collapse + @item.QuestionID1" class="panel-collapse collapse">
+                    <div id='@string.Format("collapse{0}", res)' class="panel-collapse collapse">
                         <div class="panel-body">
                             <p>@item.AnswerValue</p>
                         </div>
