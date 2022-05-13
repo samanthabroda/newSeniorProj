@@ -11,13 +11,13 @@
         {
             <p>
                 Question:
-                @item.QuestionValue();
+                @item.QuestionValue
             </p>
             <p>
                 Answer:
-                @item.AnswerValue();
+                @item.AnswerValue
             </p>
-            <a class="btn btn-primary" href="@Html.ActionLink("FAQDelete","HomeController", new { value=@item.QuestionID1})">Delete</a> <a class="btn btn-primary" href="@Html.ActionLink("FAQSaveEdit","HomeController", new { value=item.QuestionID1})">Save</a>
+            <a class="btn btn-primary" href="@Url.Action("FAQDelete","HomeController", new { value=@item.QuestionID1})">Delete</a> <a class="btn btn-primary" href="@Url.Action("FAQSaveEdit","HomeController", new { value=item.QuestionID1})">Save</a>
             <br/>
         }
 </div>

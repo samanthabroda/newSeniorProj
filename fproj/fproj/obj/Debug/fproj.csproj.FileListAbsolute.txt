@@ -216,3 +216,5 @@ C:\Users\ahmar\OneDrive\Documents\GitHub\newSeniorProj\fproj\fproj\obj\Debug\fpr
 C:\Users\ahmar\OneDrive\Documents\GitHub\newSeniorProj\fproj\fproj\obj\Debug\fproj.pdb
 C:\Users\Sam Broda\Documents\GitHub\newSeniorProj\fproj\fproj\bin\Humanizer.dll
 C:\Users\Sam Broda\Documents\GitHub\newSeniorProj\fproj\fproj\bin\Humanizer.xml
+C:\Users\ahmar\OneDrive\Documents\GitHub\newSeniorProj\fproj\fproj\bin\Humanizer.dll
+C:\Users\ahmar\OneDrive\Documents\GitHub\newSeniorProj\fproj\fproj\bin\Humanizer.xml
