@@ -310,6 +310,8 @@
     <Content Include="Views\Home\UserTable.cshtml" />
     <Content Include="Views\Home\FAQEdit.cshtml" />
     <Content Include="Views\Home\FAQAdd.cshtml" />
+    <Content Include="Views\Home\FAQDelete.cshtml" />
+    <Content Include="Views\Home\FAQSaveEdit.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

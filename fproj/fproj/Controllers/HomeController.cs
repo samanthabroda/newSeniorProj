@@ -8,6 +8,8 @@ using System.Globalization;
 using Humanizer;
 using Humanizer.Localisation;
 using Humanizer.Localisation.NumberToWords;
+using System.Web.UI;
+using System.Web.UI.WebControls;
 
 namespace fproj.Controllers
 {
@@ -78,6 +80,7 @@ namespace fproj.Controllers
             SqlConnection b = new SqlConnection(@"Data Source=DESKTOP-DOT3O9P,1434; Initial Catalog=master; User Id=maliksimrah; Password=@Farmingdale123");
             b.Open();
             SqlCommand cmd = new SqlCommand("INSERT INTO FAQ VALUES ('insert question here', 'insert answer here')", b);
+            cmd.ExecuteNonQuery();
             SqlCommand cmd2 = new SqlCommand("SELECT * FROM FAQ", b);
             var model = new List<Models.FAQEntry>();
             SqlDataReader rdr = cmd2.ExecuteReader();
@@ -90,27 +93,52 @@ namespace fproj.Controllers
                 model.Add(faqent);
             }
             b.Close();
-
             return View(model);
         }
 
-        void FAQDelete(int value)
+        public ActionResult FAQDelete(int value)
         {
             SqlConnection c = new SqlConnection(@"Data Source=DESKTOP-DOT3O9P,1434; Initial Catalog=master; User Id=maliksimrah; Password=@Farmingdale123");
             c.Open();
             SqlCommand quest = new SqlCommand($"DELETE FROM FAQ WHERE QuestionID={value}", c);
             quest.ExecuteNonQuery();
+            SqlCommand cmd2 = new SqlCommand("SELECT * FROM FAQ", c);
+            var model = new List<Models.FAQEntry>();
+            SqlDataReader rdr = cmd2.ExecuteReader();
+            while (rdr.Read())
+            {
+                var faqent = new Models.FAQEntry();
+                faqent.QuestionID1 = (int)rdr["QuestionID"];
+                faqent.QuestionValue = (string)rdr["Question"];
+                faqent.AnswerValue = (string)rdr["Answer"];
+                model.Add(faqent);
+            }
             c.Close();
-            FAQEdit();
+            return View(model);
         }
 
-        void FAQSaveEdit(int value)
+        public ActionResult FAQSaveEdit(int value)
         {
             SqlConnection c = new SqlConnection(@"Data Source=DESKTOP-DOT3O9P,1434; Initial Catalog=master; User Id=maliksimrah; Password=@Farmingdale123");
             c.Open();
-            SqlCommand quest = new SqlCommand($"SELECT Question FROM FAQ WHERE QuestionID={value}", c);
-            SqlCommand ans = new SqlCommand($"SELECT Answer FROM FAQ WHERE QuestionID={value}", c);
+            string gr = Request.Form[$"questfor{value}"].ToString();
+            string gre = Request.Form[$"ansfor{value}"].ToString();
+
+            SqlCommand cmd = new SqlCommand($"UPDATE FAQ SET Question={gr}, Answer={gre} WHERE QuestionID={value}", c);
+            cmd.ExecuteNonQuery();
+            SqlCommand cmd2 = new SqlCommand("SELECT * FROM FAQ", c);
+            var model = new List<Models.FAQEntry>();
+            SqlDataReader rdr = cmd2.ExecuteReader();
+            while (rdr.Read())
+            {
+                var faqent = new Models.FAQEntry();
+                faqent.QuestionID1 = (int)rdr["QuestionID"];
+                faqent.QuestionValue = (string)rdr["Question"];
+                faqent.AnswerValue = (string)rdr["Answer"];
+                model.Add(faqent);
+            }
             c.Close();
+            return View(model);
         }
 
         public ActionResult Events()

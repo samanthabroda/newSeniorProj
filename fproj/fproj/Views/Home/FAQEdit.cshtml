@@ -1,23 +1,25 @@
 ﻿@{
     ViewBag.Title = "TRIO FAQ Edit";
 }
-    <h2>@ViewBag.Title (@Html.ActionLink("Done", "FAQ", "Home"))</h2>
-    <a class="btn btn-primary" href="@Url.Action("FAQAdd","HomeController")">Create New</a>
+<h2>@ViewBag.Title (@Html.ActionLink("Done", "FAQ", "Home"))</h2>
+<a class="btn btn-primary" href="@Url.Action("FAQAdd","Home")">Create New</a>
 
 <!-- Bootstrap FAQ - START -->
 <div class="container">
     <br />
-        @foreach (var item in Model)
-        {
-            <p>
-                Question:
-                @item.QuestionValue
-            </p>
-            <p>
-                Answer:
-                @item.AnswerValue
-            </p>
-            <a class="btn btn-primary" href="@Url.Action("FAQDelete","HomeController", new { value=@item.QuestionID1})">Delete</a> <a class="btn btn-primary" href="@Url.Action("FAQSaveEdit","HomeController", new { value=item.QuestionID1})">Save</a>
-            <br/>
-        }
+    @foreach (var item in Model)
+    {
+        var q = $"questfor{@item.QuestionID1}";
+        var a = $"ansfor{@item.QuestionID1}";
+        <form id='@string.Format("formfor{0}", @item.QuestionID1)' runat="server">
+            <h4>Question:</h4>
+            <textarea runat="server" name='@string.Format(q)' id='@string.Format(q)' style="max-height: 100px; height:100px; width: 100%;">@item.QuestionValue</textarea>
+            <h4>Answer:</h4>
+            <textarea runat="server" name='@string.Format(a)' id='@string.Format(a)' style="max-height: 100px; height:100px; width: 100%;">@item.AnswerValue</textarea>
+            <br />
+            <a class="btn btn-primary" href="@Url.Action("FAQDelete","Home", new { value=@item.QuestionID1})">Delete</a> 
+            <input type="submit" class="btn btn-primary" href="@Url.Action("FAQSaveEdit","Home", new { value=@item.QuestionID1})" value="Save"/>
+            <br />
+        </form>
+    }
 </div>
