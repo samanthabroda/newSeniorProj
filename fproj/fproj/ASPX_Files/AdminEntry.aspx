@@ -10,10 +10,6 @@
 
 
 
-<style type="text/css">
-    #form1 {}
-</style>
-
 </head>
 
 
@@ -33,7 +29,7 @@
             <br />
 		
         
-        Type Of User*:<br />
+       <label id ="userType">Type Of User:</label> <br />
         <asp:RadioButtonList ID="txtUser" runat="server">
             <asp:ListItem>Student</asp:ListItem>
             <asp:ListItem>TLC Member</asp:ListItem>
@@ -43,7 +39,7 @@
             <br />
             <br />
             <br />
-            First Name*:</label>
+            <label id ="fN">First Name*:</label>
         <asp:TextBox ID="txtFirstName" runat="server"></asp:TextBox>
         <br>
 
@@ -83,14 +79,14 @@
         <label id="formLabel1" for="PhoneNumber">Current GPA:</label>
         <asp:TextBox ID="txtCurrentGPA" runat="server"></asp:TextBox>
         <br />
-        <label id="formLabel9" for="FirstName">RAM ID:
+        <label id="formLabel9" for="FirstName">RAM ID:</label>
         <asp:TextBox ID="txtRamID" runat="server"></asp:TextBox>
         <br />
         <br />
         <br />
         <strong>TLC ENTRY ONLY</strong><br />
         <br />
-        Position:
+        <label id="position">Position:</label>
         <asp:TextBox ID="txtPosition" runat="server"></asp:TextBox>
         <br />
         <br />
@@ -101,19 +97,19 @@
 
         <label id="formLabel10" for="Email">Education:</label>
         <asp:TextBox ID="txtEducation" runat="server"></asp:TextBox>
-        <br>
+        <br> <br />
 
-        <label id="formLabel11" for="PhoneNumber">Availability:</label>
+        <label id="formLabel11" for="PhoneNumber">Availability:</label><br />
         <asp:TextBox ID="txtAvailability" runat="server" Rows="6" TextMode="MultiLine"></asp:TextBox>
         <br />
-        Department:
+        <label id="Department">Department:</label>
         <asp:TextBox ID="txtDepartment" runat="server"></asp:TextBox>
         <br />
         <br />
         <br />
-        <strong>ADMINISTRATOR ENTRY ONLY</strong></label><br />
+        <strong>ADMINISTRATOR ENTRY ONLY</strong><br />
         <br />
-        Branch:
+        <label id="branch">Branch:</label>
         <asp:TextBox ID="txtBranch" runat="server"></asp:TextBox>
         <br />
         <br />

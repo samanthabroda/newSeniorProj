@@ -1,4 +1,27 @@
-﻿
-h1 {
+﻿h1 {
     text-align: center;
+}
+
+#form1 {
+    width: 40%;
+    margin: auto;
+    display: inline-block;
+    align-items: center;
+}
+
+#txtUser {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    padding-bottom: 5px;
+    display: inline-block;
+    align-items: center;
+}
+
+
+#userType, #fN, #formLabel6, #formLabel2, #formLabel3, #formLabel4, #formLabel5,
+#formLabel7, #formLabel8, #formLabel1, #formLabel9, #position, #formLabel10, #formLabel11, #Department, #branch {
+    width: 25%;
+    margin: auto;
+    display: inline-block;
+    align-items: center;
 }
